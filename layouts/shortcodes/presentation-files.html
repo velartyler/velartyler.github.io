@@ -1,0 +1,7 @@
+{{- /* Shows the PDF in this presentation's folder (if one has been added): a download link plus the embedded viewer. */ -}}
+{{- with .Page.Resources.GetMatch "*.pdf" }}
+<p><a href="{{ .RelPermalink }}">{{ site.Params.presentationPdfLinkText | default "[LINK TEXT NEEDED]" }}</a></p>
+<div class="pdf-embed">
+  <iframe src="{{ .RelPermalink }}#view=FitH" title="{{ $.Page.Title | plainify }}" loading="lazy"></iframe>
+</div>
+{{- end }}

@@ -1,0 +1,9 @@
+{{- $.Scratch.Add "index" slice -}}
+{{- /* Section pages that have their own text (e.g. the Presentations list) are searchable too */ -}}
+{{- $pages := site.RegularPages | append (where site.Sections ".Content" "!=" "") -}}
+{{- range $pages -}}
+    {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary) -}}
+    {{- end }}
+{{- end -}}
+{{- $.Scratch.Get "index" | jsonify -}}

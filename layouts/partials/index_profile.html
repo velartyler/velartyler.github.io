@@ -1,0 +1,73 @@
+<div class="profile portfolio-profile">
+    {{- with site.Params.profileMode }}
+    <div class="profile_inner portfolio-hero">
+        <div class="hero-copy">
+            <p class="hero-kicker"></p>
+            <h1 id="portfolio-title">{{ .title | default site.Title | markdownify }}</h1>
+            <div class="subtitle-box">
+                <p class="hero-thesis">{{ .subtitle | markdownify }}</p>
+            </div>
+
+
+            {{- partial "social_icons.html" -}}
+        </div>
+
+        {{- if .imageUrl -}}
+        <aside class="hero-field-card" aria-label="Annotated profile card">
+            <div class="field-card-label"></div>
+            <div class="hero-portrait">
+                {{- $img := "" }}
+                {{- if not (urls.Parse .imageUrl).IsAbs }}
+                    {{- $img = resources.Get .imageUrl }}
+                {{- end }}
+                {{- if $img }}
+                    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+                    {{- if hugo.IsExtended -}}
+                        {{- $processableFormats = $processableFormats | append "webp" -}}
+                    {{- end -}}
+                    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+                    {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
+                        {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
+                            {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
+                        {{- else if .imageHeight }}
+                            {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
+                        {{ else if .imageWidth }}
+                            {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
+                        {{ else }}
+                            {{- $img = $img.Resize "420x420" }}
+                        {{- end }}
+                    {{- end }}
+                    <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" height="420" width="420" />
+                {{- else }}
+                    <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" height="420" width="420" />
+                {{- end }}
+            </div>
+            {{- with .fields }}
+            <ul class="field-card-meta">
+                {{- range . }}
+                <li>{{ . }}</li>
+                {{- end }}
+            </ul>
+            {{- end }}
+        </aside>
+        {{- end }}
+    </div>
+
+    <nav class="portfolio-routes" aria-label="Choose a page">
+        <p class="routes-kicker"></p>
+        {{- with .cards }}
+        <div class="route-grid">
+            {{- range $i, $card := . }}
+            <a class="route-card" href="{{ $card.url | relLangURL }}">
+                <span class="route-intent">{{ printf "%02d" (add $i 1) }}</span>
+                <strong>{{ $card.title }}</strong>
+                {{- with $card.description }}
+                <span>{{ . | markdownify }}</span>
+                {{- end }}
+            </a>
+            {{- end }}
+        </div>
+        {{- end }}
+    </nav>
+    {{- end}}
+</div>

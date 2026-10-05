@@ -1,0 +1,134 @@
+baseURL: https://velartyler.github.io/
+languageCode: en-us
+title: Kyler Laycock
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+
+# No tag/category pages
+disableKinds: ["taxonomy", "term"]
+
+pagination:
+  pagerSize: 10
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 10
+    - identifier: outreach
+      name: Teaching & Outreach
+      url: /outreach/
+      weight: 20
+    - identifier: cv
+      name: CV
+      url: /cv/
+      weight: 30
+    - identifier: presentations
+      name: Presentations
+      url: /presentations/
+      weight: 40
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 50
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 60
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Kyler Laycock, PhD candidate in Linguistics at The Ohio State University. Research in sociolinguistics, phonetics, and speech perception."
+  keywords: [Research, Linguistics, Phonetics, Speech Perception, Sociolinguistics]
+  author: "Kyler Laycock"
+  images: ["profile.png"]
+  languageAltTitle: "English"
+  tocopen: false
+  ShowToc: true
+  ShowReadingTime: false
+  ShowBreadCrumbs: false
+  ShowPageNums: true
+  ShowPostNavLinks: true
+  ShowFullTextinRSS: true
+  ShowRssButtonInSectionTermList: false
+  ShowCodeCopyButtons: true
+  ShowShareButtons: false
+  presentationPdfLinkText: "Download (PDF)"
+  # Search settings: look for matches anywhere in a page, not just near the start
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    ignoreLocation: true
+    threshold: 0.1
+    minMatchCharLength: 2
+    keys: ["title", "summary", "content"]
+  # Page Mode
+  profileMode:
+    enabled: true
+    title: "Kyler Laycock" # optional default will be site title
+    subtitle: |
+      PhD Candidate, Department of Linguistics, Ohio State University
+    imageUrl: "profile.png" # optional
+    # Rows shown under the photo on the homepage
+    fields:
+      - Sociolinguistics
+      - Phonetics
+      - Speech Perception
+    # Cards at the bottom of the homepage (numbered automatically)
+    cards:
+      - title: Profile
+        url: /profile/
+        description: "about me"
+      - title: Research
+        url: /research/
+        description: "about my work"
+      - title: Teaching & Outreach
+        url: /outreach/
+        description: "about classrooms and communities"
+      - title: Posts
+        description: "about anything else"
+        url: /posts/
+    imageTitle: "Headshot of Kyler Laycock"
+    #imageWidth: 10 # custom size
+    #imageHeight: 60 # custom size
+  # Optional social icons
+  socialIcons:
+    - name: googlescholar
+      title: Google Scholar
+      url: https://scholar.google.com/citations?user=ptUkzLEAAAAJ&hl
+    - name: orcid
+      title: ORCID
+      url: https://orcid.org/0000-0002-3731-0841
+    - name: email
+      url: "mailto:laycock.21@osu.edu"
+  # Optional assets
+  assets: # relative to the /static directory
+  # favicon generated from https://favicon.io/favicon-generator/
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/favicon.ico"
+    theme_color: "#0b3b4a" # hex color for theme color
+markup:
+  goldmark:
+    parser:
+      attribute:
+        block: true
+
+# Search Page
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search

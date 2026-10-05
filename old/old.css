@@ -1,0 +1,36 @@
+:root {
+  --gap: 28px;
+  --content-gap: 24px;
+  --nav-width: 1120px;
+  --main-width: 860px;
+  --radius: 18px;
+  --theme: #f5f1e6;
+  --entry: #fffaf0;
+  --primary: #101820;
+  --secondary: #59656f;
+  --tertiary: #d7cbb8;
+  --content: #1d2a32;
+  --code-bg: #9caf88;
+  --code-block-bg: #102832;
+  --border: #d8c9b4;
+  --portfolio-ink: #101820;
+  --portfolio-estuary: #0b3b4a;
+  --portfolio-jade: #2a9d8f;
+  --portfolio-paper: #f5f1e6;
+  --portfolio-signal: #9b3f28;
+  --portfolio-rice: #0a6c8f;
+}
+
+.dark {
+  --theme: #0d171b;
+  --entry: #122329;
+  --primary: #f5f1e6;
+  --secondary: #b9c5c5;
+  --tertiary: #31515a;
+  --content: #e8e1d4;
+  --code-bg: #16282f;
+  --code-block-bg: #071012;
+  --border: #284850;
+  --portfolio-paper: #0d171b;
+  --portfolio-signal: #ffb199;
+}

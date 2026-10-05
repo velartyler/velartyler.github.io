@@ -1,0 +1,5 @@
+{{- $src := .Get "src" | relURL -}}
+{{- $label := .Get "label" | default "PDF document" -}}
+<div class="pdf-embed">
+  <iframe src="{{ $src }}#view=FitH" title="{{ $label }}" loading="lazy"></iframe>
+</div>
