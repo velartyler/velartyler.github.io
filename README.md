@@ -13,7 +13,7 @@ cd path/to/top/directory
 hugo server
 ```
 
-Then open http://localhost:1313. The page reloads as files are saved.
+open http://localhost:1313. should refresh as you edit files.
 
 The theme is a Git submodule. On a fresh clone, get it with:
 
@@ -21,7 +21,7 @@ The theme is a Git submodule. On a fresh clone, get it with:
 git clone --recurse-submodules https://github.com/velartyler/velartyler.github.io.git
 ```
 
-or, in an existing clone:
+or in existing clone:
 
 ```sh
 git submodule update --init --recursive
@@ -33,7 +33,7 @@ Pushing to `main` builds and deploys the site through GitHub Actions (`.github/w
 
 ## Where things are
 
-| Path | What it holds |
+| Path | What's there |
 |---|---|
 | `hugo.yaml` | Site settings, top menu, social links, and the homepage text (subtitle, research areas, cards) |
 | `content/profile.md` | Profile page |
@@ -48,22 +48,22 @@ Pushing to `main` builds and deploys the site through GitHub Actions (`.github/w
 | `layouts/` | Template overrides (homepage layout, footer, 404 page, etc.) |
 | `assets/css/extended/portfolio-redesign.css` | Custom styles and colors |
 
-## Updating the CV
+## Updating CV
 
-1. Replace `static/pdf/Laycock_CV.pdf`, keeping the same file name.
-2. Change the "updated" line in `content/cv/index.md`.
+1. Just replace `static/pdf/CV.pdf` (keep same file name).
+2. Change "updated" line in `content/cv/index.md` to update date
 
-## Adding a featured presentation
+## Adding presentation to card
 
 1. Copy one of the `content/presentations/featured-*` folders and rename it.
-2. In its `index.md`, set the `title` and change `weight` to set its position (lower numbers come first).
-3. Put the PDF in the folder. The download link and viewer appear on their own.
-4. For a thumbnail, put an image of the first slide in the folder as `thumbnail.png` and uncomment the `image:` line in `index.md`.
+2. In `index.md`, set `title` and change `weight` to set position
+3. Put PDF of slides or poster in the folder. Download link and viewer should appear.
+4. For thumbnail, put an image of the first slide in the folder as `thumbnail.png` and uncomment `image:` line in `index.md`.
 
-## Adding a post
+## Adding blog posts
 
-Add a Markdown file to `content/posts/` with a `title` and `date` at the top. See the existing posts for the format.
+Add a .md file to `content/posts/` with `title` and `date` at the top
 
 ## "Under construction" banner
 
-Pages with `underConstruction: true` at the top of their file show the banner (`static/under-construction.jpg`). Delete that line when a page is finished. It's currently on `content/research.md`, `content/posts/_index.md`, and `content/presentations/_index.md`.
+Wrote a thing that should let you change the value of `underConstruction: true` at the top of the a page's file to show or hide the banner (`static/under-construction.jpg`). Delete that line when a page is finished.
