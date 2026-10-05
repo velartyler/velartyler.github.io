@@ -35,13 +35,13 @@ Pushing to `main` builds and deploys the site through GitHub Actions (`.github/w
 
 | Path | What's there |
 |---|---|
-| `hugo.yaml` | Site settings, top menu, social links, and the homepage text (subtitle, research areas, cards) |
-| `content/profile.md` | Profile page |
+| `hugo.yaml` | Site settings, top menu, Google scholar and similar links, homepage text (subtitle, research areas, cards) |
+| `content/profile.md` | About me page |
 | `content/research.md` | Research page |
 | `content/outreach/index.md` | Teaching & Outreach page |
 | `content/cv/index.md` | CV page |
-| `content/presentations/_index.md` | Full list of talks and presentations |
-| `content/presentations/featured-*/` | One folder per featured presentation card |
+| `content/presentations/_index.md` |List of talks and presentations |
+| `content/presentations/featured-*/` | One folder per presentation card for featured talks |
 | `content/posts/` | Posts |
 | `static/pdf/Laycock_CV.pdf` | CV PDF |
 | `static/profile.png` | Headshot |
