@@ -51,7 +51,7 @@ params:
   description: "Kyler Laycock, PhD candidate in Linguistics at The Ohio State University. Research in sociolinguistics, phonetics, and speech perception."
   keywords: [Research, Linguistics, Phonetics, Speech Perception, Sociolinguistics]
   author: "Kyler Laycock"
-  images: ["profile.png"]
+  images: ["android-chrome-192x192.png"]
   languageAltTitle: "English"
   tocopen: false
   ShowToc: true
