@@ -120,6 +120,9 @@ params:
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/favicon.ico"
     theme_color: "#0b3b4a" # hex color for theme color
+  analytics:
+    google:
+      SiteVerificationTag: "ghBuc7t5a7nNQTsa8yCPv9V7T7lAi-Hr892hlJjszSQ"
 markup:
   goldmark:
     parser:

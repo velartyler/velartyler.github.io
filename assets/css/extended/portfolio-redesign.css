@@ -733,3 +733,85 @@ body {
   max-width: 340px;
   width: 100%;
 }
+
+
+
+/* Photo carousel ({{< gallery >}} shortcode) */
+.gallery {
+  margin: 0 0 2rem;
+  position: relative;
+}
+
+.gallery-track {
+  border-radius: var(--radius);
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-track:focus-visible {
+  outline: 3px solid var(--portfolio-jade);
+  outline-offset: 3px;
+}
+
+.post-content .gallery-slide {
+  /* Same height for every photo, sized to the screen; each photo scales to fit inside it */
+  background: var(--code-bg);
+  height: min(70vh, 640px, 110vw);
+  flex: 0 0 100%;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.post-content .gallery-slide img {
+  border-radius: 0;
+  display: block;
+  height: 100%;
+  margin: 0;
+  object-fit: contain;
+  width: 100%;
+}
+
+.gallery-btn {
+  align-items: center;
+  background: color-mix(in srgb, var(--entry) 88%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.6rem;
+  height: 2.6rem;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 0 0.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.6rem;
+}
+
+.gallery-btn:hover {
+  background: var(--entry);
+}
+
+.gallery-prev { left: 0.75rem; }
+.gallery-next { right: 0.75rem; }
+
+.gallery-count {
+  background: color-mix(in srgb, var(--entry) 88%, transparent);
+  border-radius: 999px;
+  bottom: 0.75rem;
+  color: var(--primary);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  position: absolute;
+  right: 0.75rem;
+}

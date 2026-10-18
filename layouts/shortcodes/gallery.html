@@ -1,0 +1,57 @@
+{{- /*
+  Photo carousel.
+  Usage, inside a post that is a folder (page bundle):  {{< gallery >}}
+  Shows every image in the post's "gallery" subfolder, in filename order.
+  Optional per-photo descriptions go in the post's front matter (see README instructions).
+*/ -}}
+{{- $imgs := .Page.Resources.Match "gallery/*" -}}
+{{- $imgs = where $imgs "ResourceType" "image" -}}
+{{- $total := len $imgs -}}
+{{- if $total }}
+{{- $id := printf "gallery-%d" .Ordinal }}
+<div class="gallery" id="{{ $id }}" role="region" aria-roledescription="carousel" aria-label="Photo gallery">
+  <div class="gallery-track" tabindex="0">
+    {{- range $i, $img := $imgs }}
+    {{- $show := $img }}
+    {{- if and (ne $img.MediaType.SubType "svg") (gt $img.Width 1600) }}{{ $show = $img.Resize "1600x" }}{{ end }}
+    {{- $alt := $img.Params.alt | default (printf "Photo %d of %d" (add $i 1) $total) }}
+    <figure class="gallery-slide">
+      <img src="{{ $show.RelPermalink }}" alt="{{ $alt }}" width="{{ $show.Width }}" height="{{ $show.Height }}" {{ if $i }}loading="lazy"{{ end }}>
+    </figure>
+    {{- end }}
+  </div>
+  {{- if gt $total 1 }}
+  <button class="gallery-btn gallery-prev" type="button" aria-label="Previous photo">&#8249;</button>
+  <button class="gallery-btn gallery-next" type="button" aria-label="Next photo">&#8250;</button>
+  <div class="gallery-count" aria-live="polite"><span class="gallery-current">1</span> / {{ $total }}</div>
+  {{- end }}
+</div>
+{{- if gt $total 1 }}
+<script>
+(function () {
+  var root = document.getElementById("{{ $id }}");
+  if (!root) return;
+  var track = root.querySelector(".gallery-track");
+  var slides = track.querySelectorAll(".gallery-slide");
+  var current = root.querySelector(".gallery-current");
+  function index() { return Math.round(track.scrollLeft / track.clientWidth); }
+  function go(i) {
+    i = (i + slides.length) % slides.length;
+    track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+  }
+  root.querySelector(".gallery-prev").addEventListener("click", function () { go(index() - 1); });
+  root.querySelector(".gallery-next").addEventListener("click", function () { go(index() + 1); });
+  track.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") { e.preventDefault(); go(index() - 1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); go(index() + 1); }
+  });
+  var t;
+  track.addEventListener("scroll", function () {
+    clearTimeout(t);
+    t = setTimeout(function () { current.textContent = index() + 1; }, 60);
+  });
+})();
+</script>
+{{- end }}
+<div class="gallery-end" hidden></div>
+{{- end }}

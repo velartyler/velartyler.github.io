@@ -3,7 +3,7 @@
 {{- $pages := site.RegularPages | append (where site.Sections ".Content" "!=" "") -}}
 {{- range $pages -}}
     {{- if and (not .Params.searchHidden) (ne .Layout `archives`) (ne .Layout `search`) }}
-    {{- $.Scratch.Add "index" (dict "title" .Title "content" .Plain "permalink" .Permalink "summary" .Summary) -}}
+    {{- $.Scratch.Add "index" (dict "title" .Title "content" (replaceRE `(?s)<div class="gallery".*?<div class="gallery-end" hidden></div>` "" .Content | plainify | htmlUnescape) "permalink" .Permalink "summary" (.Description | default (partial "post_summary.html" .))) -}}
     {{- end }}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

@@ -1,5 +1,5 @@
 ---
-underConstruction: true
+underConstruction: false
 title: "Presentations"
 cascade:
   showToc: false
@@ -8,7 +8,7 @@ cascade:
     responsiveImages: true
 ---
 
-## Talks and Presentations
+## Talks, Presentations, Posters
 
 * **Laycock, Kyler** & Clopper, Cynthia G. 2026, May. Effects of social information on fricative discrimination in a change detection task. Poster presented at Acoustical Society of America (ASA) 190. Philadelphia, PA.
 * Bissell, Marie, Bryan, Larisa, Chandler-Holtz, Declan, **Laycock, Kyler**, Lilley, Kevin, & Clopper, Cynthia G. 2026, May. Quantifying exposure to regional dialect variation in American English: General and specific scores. Poster presented at Acoustical Society of America (ASA) 190. Philadelphia, PA.

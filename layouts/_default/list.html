@@ -88,7 +88,7 @@
   </header>
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
-    <p>{{ $page.Description | plainify | htmlUnescape }}{{ if $page.Truncated }}...{{ end }}</p>
+    <p>{{ if $page.Description }}{{ $page.Description | plainify | htmlUnescape }}{{ else if eq $page.Section "posts" }}{{ partial "post_summary.html" $page }}{{ end }}</p>
   </div>
   {{- end }}
   {{- if not (.Param "hideMeta") }}

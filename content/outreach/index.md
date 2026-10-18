@@ -22,12 +22,12 @@ title: "Teaching & Outreach"
 ## Outreach
 
 * Presenter, Arts & Sciences Alumni Awards Impact Showcase, Ohio State University, Columbus, OH (Spring 2026)
-* Language Pod Staff, COSI Science Festival, Community & public engagement event, COSI, Columbus, OH (Summer 2025; 2026)
-* Instructor, COSI PLATFORM, 9-12th grade STEM Education Program, COSI, Columbus, OH (Spring 2025; 2026)
+* Language Pod Staff, COSI Science Festival, Community & public engagement event, COSI, Columbus, OH (Summer 2025; 2026) [Slides from 11th Grade Vowel Analysis with Praat](/static/pdf/platform_11_day2.pdf)
+* Instructor and Programming Designer, COSI PLATFORM, 9-12th grade STEM Education Program, COSI, Columbus, OH (Spring 2025; 2026)
 * Girl Scouts Community Partner, Language science event for local troops, COSI, Columbus, OH (Spring 2025; 2026)
 * Presenter, The Color of Science, Science Outreach, Literacy, and Diversity Event, COSI, Columbus, OH (Spring 2025)
 * Poster Presenter, Sparking Early Interest in Language Science, Ohio State Office of Outreach and Engagement Community Partner Breakfast and James F. Patterson Land-Grant University Lecture (Fall 2025; Spring 2026)
-* Poster Presenter, Sparking early interest in language science with the Girl Scouts (with [Nikole D. Patson](https://u.osu.edu/patson.3/)), LingComm25, virtual (Spring 2025)
+* Poster Presenter, Sparking early interest in language science with the Girl Scouts (with [Nikole D. Patson](https://u.osu.edu/patson.3/)), LingComm25, virtual (Spring 2025) [pdf](/static/pdf/lingcomm_gs.pdf)
 
 ### Linguistics Outside the Classroom
 

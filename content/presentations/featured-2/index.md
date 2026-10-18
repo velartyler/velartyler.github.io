@@ -1,11 +1,10 @@
 ---
-title: "[PRESENTATION TITLE NEEDED]"
+title: "Implicit and Explicit Convergence to Voice Quality"
 date: 2026-10-05
 weight: 2
-description: ""
+description: "Presented October 2024"
 cover:
-  # Add slide 1 as an image in this folder (e.g. thumbnail.png), then uncomment:
-  # image: "thumbnail.png"
+  image: "thumbnail.png"
   hiddenInSingle: true
 ---
 

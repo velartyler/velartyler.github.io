@@ -1,0 +1,5 @@
+{{- /* Automatic preview text for lists and search when a page has no "description".
+       Skips any photo gallery so the preview starts with the post's words. */ -}}
+{{- $html := replaceRE `(?s)<div class="gallery".*?<div class="gallery-end" hidden></div>` "" .Content -}}
+{{- $text := $html | plainify | htmlUnescape | strings.TrimSpace -}}
+{{- return ($text | truncate 280) -}}

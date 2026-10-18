@@ -1,11 +1,10 @@
 ---
-title: "[PRESENTATION TITLE NEEDED]"
+title: "Effects of social information on fricative discrimination in a change detection task"
 date: 2026-10-05
 weight: 1
-description: ""
+description: " Presented May 2026"
 cover:
-  # Add slide 1 as an image in this folder (e.g. thumbnail.png), then uncomment:
-  # image: "thumbnail.png"
+  image: "thumbnail.png"
   hiddenInSingle: true
 ---
 

@@ -1,11 +1,10 @@
 ---
-title: "[PRESENTATION TITLE NEEDED]"
+title: "We’re worrying about the wrong thing; the Matched Guise Technique and social speech perception"
 date: 2026-10-05
 weight: 3
-description: ""
+description: "Presented October 2023"
 cover:
-  # Add slide 1 as an image in this folder (e.g. thumbnail.png), then uncomment:
-  # image: "thumbnail.png"
+  image: "thumbnail.png"
   hiddenInSingle: true
 ---
 
