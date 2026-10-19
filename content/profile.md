@@ -7,6 +7,6 @@ I am a PhD Candidate in the Department of Linguistics at the Ohio State Universi
 
 I am a phonetician and experimental sociolinguist interested in the integration of linguistic and social information in perception. I am also interested in the role of both listeners' awareness and cognitive control in speech perception. My experimental work connects cognitive science, psycholinguistics, and phonetics to variationist and third-wave sociolinguistic theory.
 
- I like gardening, listing weights, video games, and baking [bread](/posts/bread/).
+ I like gardening, lifting weights, video games, and baking [bread](/posts/bread/).
 
 You can contact me by email at laycock.21@osu.edu
